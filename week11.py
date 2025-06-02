@@ -20,7 +20,7 @@ class Ui_FilmManager(QtWidgets.QMainWindow):
         self.setCentralWidget(self.centralWidget)
         self.mainLayout = QtWidgets.QVBoxLayout(self.centralWidget)
 
-        # === ScrollArea untuk Form Input ===
+    
         self.formScrollArea = QtWidgets.QScrollArea()
         self.formScrollArea.setWidgetResizable(True)
         self.formWidget = QtWidgets.QWidget()
@@ -50,7 +50,6 @@ class Ui_FilmManager(QtWidgets.QMainWindow):
         self.formScrollArea.setWidget(self.formWidget)
         self.mainLayout.addWidget(self.formScrollArea)
 
-        # === QDockWidget untuk Pencarian ===
         self.dock = QtWidgets.QDockWidget("Panel Pencarian", self)
         self.dock.setFeatures(QtWidgets.QDockWidget.DockWidgetMovable | QtWidgets.QDockWidget.DockWidgetFloatable)
         self.searchInput = QtWidgets.QLineEdit()
@@ -58,7 +57,7 @@ class Ui_FilmManager(QtWidgets.QMainWindow):
         self.dock.setWidget(self.searchInput)
         self.addDockWidget(QtCore.Qt.RightDockWidgetArea, self.dock)
 
-        # === Table Film dengan ScrollArea ===
+
         self.tableWidgetScrollArea = QtWidgets.QScrollArea()
         self.tableWidgetScrollArea.setWidgetResizable(True)
         self.tableWidgetContainer = QtWidgets.QWidget()
